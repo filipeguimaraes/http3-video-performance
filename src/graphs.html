@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Graphs</title>
+    <script src="./libs/chart.umd.js"></script>
+  </head>
+
+  <body style="background-color: #353535">
+    <div style="text-align: center">
+      <label style="color: white">HTTP/2 file</label>
+      <input type="file" name="HTTP/2 file" id="file-selector-h2" />
+      <label style="color: white">HTTP/3 file</label>
+      <input type="file" name="HTTP/3 file" id="file-selector-h3" />
+    </div>
+    <div style="text-align: center; display: flex">
+      <canvas
+        id="latencyChart"
+        style="
+          width: 48%;
+          max-width: 48%;
+          max-height: 400px;
+          background-color: #ffffff;
+          margin: 1%;
+        "
+      ></canvas>
+      <canvas
+        id="driftChart"
+        style="
+          width: 48%;
+          max-width: 48%;
+          max-height: 400px;
+          background-color: #ffffff;
+          margin: 1%;
+        "
+      ></canvas>
+    </div>
+    <div style="text-align: center; display: flex">
+      <canvas
+        id="loadChart"
+        style="
+          width: 48%;
+          max-width: 48%;
+          max-height: 400px;
+          background-color: #ffffff;
+          margin: 1%;
+        "
+      ></canvas
+      ><canvas
+        id="bufferChart"
+        style="
+          width: 48%;
+          max-width: 48%;
+          max-height: 400px;
+          background-color: #ffffff;
+          margin: 1%;
+        "
+      ></canvas>
+    </div>
+    <div style="text-align: center; display: flex">
+      <canvas
+        id="fpsChart"
+        style="
+          text-align: center;
+          width: 48%;
+          max-width: 48%;
+          max-height: 400px;
+          background-color: #ffffff;
+          margin: 1%;
+        "
+      ></canvas>
+      <div
+        style="
+          text-align: left;
+          height: 48%;
+          max-height: 400px;
+          max-height: 400px;
+          background-color: #ffffff;
+          margin: 1%;
+          display: flex;
+        "
+      >
+        <div id="lats"></div>
+        <div id="drift"></div>
+      </div>
+    </div>
+    <script src="graphs.js"></script>
+  </body>
+</html>

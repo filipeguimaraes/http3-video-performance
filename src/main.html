@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Live Streaming</title>
+    <link href="./css/video-js.min.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <script src="./libs/video.min.js"></script>
+    <script src="./libs/hls.js"></script>
+    <script src="./libs/chart.umd.js"></script>
+    <script src="./libs/jquery.min.js"></script>
+  </head>
+
+  <body style="background-color: #353535">
+    <div class="topBar">
+      <input id="protocolSelected" class="toggle" type="checkbox" />
+      <div class="topBar1">
+        <b>Duração:</b>
+        <div style="width: 5px"></div>
+        <input id="duration" type="number" value="60" />
+        <div style="width: 5px"></div>
+        <p>(segundos)</p>
+      </div>
+      <button class="topBar1" onclick="main()">Começar</button>
+    </div>
+
+    <div class="center">
+      <video id="video" width="50%" controls autoplay></video>
+    </div>
+
+    <script src=" ./vars.js"></script>
+    <script src=" ./main.js"></script>
+    <script src=" ./data.js"></script>
+  </body>
+</html>
