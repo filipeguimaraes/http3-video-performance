@@ -30,7 +30,7 @@ Script developed using [hls.js](https://github.com/video-dev/hls.js) framework w
 
 3. Start ffmpeg.
    ```console
-   $ ffmpeg -stream_loop -1 -re -i <path-to-video> -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp :// localhost /show/stream
+   $ ffmpeg -stream_loop -1 -re -i <path-to-video> -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://localhost/show/stream
    ```
    
 4. Open main.html (src/main.html) with prefered browser (using the proper configuration metion [here](docs/h3browsers.md)).
