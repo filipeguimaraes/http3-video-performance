@@ -66,12 +66,12 @@ function createMeans() {
 
     let drifth2 = dataH2.drift.map(
         function (obj) {
-            if (obj.drift > 1) { return -1; }
+            if (obj.drift > 1) { return roundNum((obj.drift - 1) * 100); }
             else { return roundNum((1 - obj.drift) * 100); }
         }).filter((valor) => valor != -1);
     let drifth3 = dataH3.drift.map(
         function (obj) {
-            if (obj.drift > 1) { return -1; }
+            if (obj.drift > 1) { return roundNum((obj.drift - 1) * 100); }
             else { return roundNum((1 - obj.drift) * 100); }
         }).filter((valor) => valor != -1);
 
@@ -102,7 +102,7 @@ function createCharts() {
         },
         options: {
             scales: {
-                x: { title: { display: true, text: 'Tempo decorrido (s)' } },
+                x: { title: { display: true, text: 'Tempo decorrido (s)', type: 'linear' } },
                 y: { title: { display: true, text: 'Latência (ms)' } }
             },
             parsing: {
@@ -127,7 +127,7 @@ function createCharts() {
         },
         options: {
             scales: {
-                x: { title: { display: true, text: 'Tempo decorrido (s)' } },
+                x: { title: { display: true, text: 'Tempo decorrido (s)' }, type: 'linear' },
                 y: { title: { display: true, text: 'Drift' } }
             },
             parsing: {
